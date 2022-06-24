@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--fromDegrees 开始旋转的角度 正值代表顺时针方向角度 负值代表逆时针方向度数    -->
+<!--toDegrees   结束旋转角度   正值代表顺时针方向角度 负值代表逆时针方向度数-->
+<!--pivotX/Y   等同于sacleanim.xml属性介绍-->
+
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="0"
+    android:toDegrees="-650"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:fillBefore="true"
+    android:repeatCount="30"
+    android:repeatMode="reverse"
+    android:duration="30"/>

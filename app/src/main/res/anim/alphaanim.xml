@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--fromAlpha 动画开始的透明度 从0.0(全透明)-1.0(完全不透明)    -->
+<!--toAlPha   动画结束时的透明度 0.0(全透明)-1.0(完全不透明)-->
+
+<alpha xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromAlpha="1.0"
+    android:toAlpha="0.1"
+    android:fillBefore="true"
+    android:repeatCount="30"
+    android:repeatMode="reverse"
+    android:duration="30"/>

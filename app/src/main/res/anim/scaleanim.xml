@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--渐变尺寸伸缩动画效果，可以实现动态调控件尺寸的效果-->
+<!--fromXScale:起始的X方向上相对自身的缩放比例 1.0表示自身无变化 0.5表示缩小一倍 2.0表示放大一倍-->
+<!--fromYScale:起始的Y方向上相对自身的缩放比例-->
+<!--toXScale:结尾的X方向上相对自身的缩放比例-->
+<!--toYScale:结尾的Y方向上相对自身的缩放比例-->
+<!--pivotX:缩放起点X轴坐标 可以是数值 百分比 百分比P
+比如 50  表示在当前控件左上角加上50px作为起始缩放点
+    50%  表示在当前控件左上角加上自己宽度的50%作为起始点
+    50%P  表示在当前的左上角加上负控件宽度的50%作为起始点X轴坐标-->
+<!--pivotY:缩放起点Y坐标 取值跟pivotX一样-->
+
+
+<!--从Animation类继承的属性-->
+<!--duration:动画速度-->
+<!--fillAfter:如果设置为true 动画结束 控件保持最后状态-->
+<!--fillBefore:如果设置为ture 动画结束 控件还原到开始状态-->
+<!--fillEnabled:作用等同于fillBefore 动画结束控件还原初始状态-->
+<!--repeatCount:重复次数-->
+<!--repeatMode:重复类型
+                    reverse：倒序回放
+                    restart：重新放一遍-->
+<!--interpolator：插值器-->
+<scale xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromXScale="1.0"
+    android:fromYScale="1.0"
+    android:toXScale="1.4"
+    android:toYScale="1.4"
+    android:pivotX="50%"
+    android:pivotY="50%"
+    android:fillAfter="true"
+    android:repeatCount="30"
+    android:repeatMode="reverse"
+    android:duration="300"/>
+<!--上面这个配置 从自身大小开始 放大到1.4倍 从中心点开始放大 动画在3秒内执行完-->

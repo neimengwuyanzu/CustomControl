@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--fromAlpha 动画开始的透明度 从0.0(全透明)-1.0(完全不透明)    -->
+<!--toAlPha   动画结束时的透明度 0.0(全透明)-1.0(完全不透明)-->
+
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillAfter="true"
+    android:repeatCount="3"
+    android:repeatMode="reverse"
+    android:duration="1000">
+
+    <alpha
+        android:fromAlpha="0.0"
+        android:toAlpha="1.0"/>
+
+    <scale
+        android:fromXScale="0.0"
+        android:toXScale="1.4"
+        android:fromYScale="0.0"
+        android:toYScale="1.4"
+        android:pivotX="50%"
+        android:pivotY="50%"/>
+
+    <rotate
+        android:fromDegrees="0"
+        android:toDegrees="720"
+        android:pivotY="50%"
+        android:pivotX="50%"/>
+</set>

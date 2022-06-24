@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--fromXDelta 起始点X坐标 可以是数值百分比 百分比p 样式等同于scaleanim.xml介绍    -->
+<!--fromYDelta 起始点Y坐标 可以是数值百分比 百分比p 样式等同于scaleanim.xml介绍 -->
+<!--toXDelta 结束点X轴坐标-->
+<!--toYDelta 结束点Y轴坐标-->
+<!--这个坐标有点不好理解 周末再看看-->
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromXDelta="100%"
+    android:fromYDelta="0%"
+    android:toXDelta="-100%"
+    android:toYDelta="0"
+    android:fillBefore="true"
+    android:repeatCount="3"
+    android:repeatMode="reverse"
+    android:duration="1000"/>
