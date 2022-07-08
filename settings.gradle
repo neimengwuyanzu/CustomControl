@@ -1,9 +1,25 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        jcenter()
+        maven {
+            url "https://maven.aliyun.com/nexus/content/repositories/releases/"
+        }
+    }
+}
 dependencyResolutionManagement {
     repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
     repositories {
         google()
         mavenCentral()
-        jcenter() // Warning: this repository is going to shut down soon
+        maven { url "https://jitpack.io" }
+        jcenter()
+        maven {
+            url "https://maven.aliyun.com/nexus/content/repositories/releases/"
+        }
     }
 }
 rootProject.name = "CustomControl"

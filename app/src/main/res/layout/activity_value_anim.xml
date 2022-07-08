@@ -30,4 +30,11 @@
         android:background="#ff0"
         android:padding="10dp"
         android:text="搞事" />
+
+
+    <com.customcontrol.zydev.weight.MyPointView
+        android:layout_below="@id/tv"
+        android:id="@+id/mypoint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 </RelativeLayout>
