@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="ArcSeekBar">
+        <attr name="arcStrokeWidth" format="dimension"/>
+        <attr name="arcStrokeCap" format="enum">
+            <enum name="BUTT" value="1"/>
+            <enum name="SQUARE" value="2"/>
+            <enum name="ROUND" value="3"/>
+        </attr>
+        <attr name="arcNormalColor" format="color"/>
+        <attr name="arcProgressColor" format="color"/>
+        <attr name="arcStartAngle" format="integer"/>
+        <attr name="arcSweepAngle" format="integer"/>
+        <attr name="arcMax" format="integer"/>
+        <attr name="arcProgress" format="integer"/>
+        <attr name="arcDuration" format="integer"/>
+        <attr name="arcLabelText" format="string"/>
+        <attr name="arcLabelTextColor" format="color"/>
+        <attr name="arcLabelTextSize" format="dimension"/>
+        <attr name="arcLabelPaddingTop" format="dimension"/>
+        <attr name="arcLabelPaddingBottom" format="dimension"/>
+        <attr name="arcLabelPaddingLeft" format="dimension"/>
+        <attr name="arcLabelPaddingRight" format="dimension"/>
+        <attr name="arcShowLabel" format="boolean"/>
+        <attr name="arcShowTick" format="boolean"/>
+        <attr name="arcTickStrokeWidth" format="dimension"/>
+        <attr name="arcTickPadding" format="dimension"/>
+        <attr name="arcTickSplitAngle" format="integer"/>
+        <attr name="arcBlockAngle" format="integer"/>
+        <attr name="arcTickOffsetAngle" format="integer"/>
+        <attr name="arcThumbStrokeWidth" format="dimension"/>
+        <attr name="arcThumbColor" format="color"/>
+        <attr name="arcThumbRadius" format="dimension"/>
+        <attr name="arcThumbRadiusEnlarges" format="dimension"/>
+        <attr name="arcShowThumb" format="boolean"/>
+        <attr name="arcAllowableOffsets" format="dimension"/>
+        <attr name="arcEnabledDrag" format="boolean"/>
+        <attr name="arcEnabledSingle" format="boolean"/>
+
+    </declare-styleable>
+
+
+    <declare-styleable name="WaterMaskView">
+        <!--栏背景色-->
+        <attr name="title_background_color" format="color" />
+        <!--左边按钮是否可见-->
+        <attr name="left_button_visible" format="boolean" />
+        <!--公司文字-->
+        <attr name="company_text" format="string" />
+        <!--公司文字颜色-->
+        <attr name="title_text_color" format="color" />
+        <!--logo文字-->
+        <attr name="logo_button_text" format="string" />
+        <!--左边按钮文字颜色-->
+        <attr name="logo_button_text_color" format="color" />
+        <!--左边按钮图标-->
+        <attr name="logo_button_drawable" format="reference|integer" />
+        <!--相关信息文字-->
+        <attr name="info_text" format="string" />
+        <!--相关信息文字颜色-->
+        <attr name="info_text_color" format="color" />
+        <!--右边按钮图标-->
+        <attr name="right_button_drawable" format="reference|integer" />
+    </declare-styleable>
+
+</resources>

@@ -3,15 +3,21 @@ package com.customcontrol.zydev;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.animation.Animator;
+import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
+import android.graphics.Color;
+import android.graphics.Shader;
+import android.graphics.SweepGradient;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.customcontrol.zydev.evaluator.CharEvaluator;
+import com.customcontrol.zydev.weight.ArcSeekBar;
 import com.customcontrol.zydev.weight.MyPointView;
 
 public class ValueAnimActivity extends AppCompatActivity {
@@ -21,6 +27,7 @@ public class ValueAnimActivity extends AppCompatActivity {
     private Button cancelBtn;
     private ValueAnimator animator;
     private MyPointView pointView;
+    private Button btn_change_color;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +37,39 @@ public class ValueAnimActivity extends AppCompatActivity {
         btn = findViewById(R.id.btn);
         cancelBtn = findViewById(R.id.cancel);
         pointView = findViewById(R.id.mypoint);
+        btn_change_color = findViewById(R.id.btn_change_color);
 
+        ArcSeekBar arcSeekBar = findViewById(R.id.asb);
+        arcSeekBar.setOnChangeListener(new ArcSeekBar.OnChangeListener() {
+            @Override
+            public void onStartTrackingTouch(boolean isCanDrag) {
+
+            }
+
+            @Override
+            public void onProgressChanged(float progress, float max, boolean fromUser) {
+                arcSeekBar.setLabelText((int)progress+"");
+            }
+
+            @Override
+            public void onStopTrackingTouch(boolean isCanDrag) {
+
+            }
+
+            @Override
+            public void onSingleTapUp() {
+
+            }
+        });
+
+//        arcSeekBar.setProgressColor(0xFF02C3D5,0xFF2DDDCA);
+//        arcSeekBar.setProgressColor(Color.parseColor("#02C3D5"),Color.parseColor("#2DDDCA"));
+//        int[] mShaderColors = new int[]{0xFF02C3D5,0xFF2DDDCA};
+        float[] postions = {0f,1.0f};
+//        Shader shader = new SweepGradient(arcSeekBar.getCircleCenterX(),arcSeekBar.getCircleCenterY(),mShaderColors,postions);
+//        arcSeekBar.setShader(shader);
+        Log.d("zyzyzy", "颜色一："+Color.parseColor("#02C3D5"));
+        Log.d("zyzyzy", "颜色二："+Color.parseColor("#2DDDCA"));
 
 
         btn.setOnClickListener(view -> {
@@ -47,6 +86,16 @@ public class ValueAnimActivity extends AppCompatActivity {
             pointView.cancel();
 //            animator.cancel();
 //            animator.removeAllListeners();
+        });
+
+        btn_change_color.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                arcSeekBar.changeRunImg();
+                arcSeekBar.invalidate();
+                arcSeekBar.forceLayout();
+                arcSeekBar.requestLayout();
+            }
         });
 
         tv.setOnClickListener(view -> {
@@ -108,5 +157,10 @@ public class ValueAnimActivity extends AppCompatActivity {
         animator.setInterpolator(new AccelerateInterpolator());
         animator.start();
         return animator;
+    }
+
+    private ObjectAnimator doObjectAnim(){
+
+        return null;
     }
 }
